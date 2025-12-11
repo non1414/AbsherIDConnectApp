@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct AbsherIDConnectAppApp: App {
+struct YourAppNameApp: App {
+    @State private var showSplash = true
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if showSplash {
+                SplashVideoDemoView(showSplash: $showSplash)
+            } else {
+                AbsherConnectDemoView()
+            }
         }
     }
 }
